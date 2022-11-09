@@ -30,7 +30,6 @@ To deploy this project run
   start a project 
 ```
 
-go to http://127.0.0.1:8000
 
 ## Features
 
