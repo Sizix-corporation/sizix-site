@@ -15,13 +15,16 @@
                     <h1 class="text-white  text-3xl font-extrabold mb-3 pt-12 xl:pt-0">Je m'abonne  </h1>
                     <p class="text-lg text-white  mb-6">Inscrivez-vous à notre newsletter  pour recevoir les dernières mises à jour et des offres incroyables directement dans votre boîte de réception.</p>
                     <div class="flex w-full flex-wrap">
-                        <div class="w-full">
+                        {{checkErr}}
+                        <span  v-if="checkErr?.sucess" class='text-green-600'>Vous êtes désormais abonné à sizix information</span>
+                        <span  v-if="checkErr?.error" class='text-red-600'>Votre adresse email forunie n'est pas correct</span>
+                        <form class="w-full" @submit.prevent="submit" >
                             <div class="flex flex-col mb-3">
                                 <label class="text-base font-bold text-white opacity-60 mb-2" for="email">Email</label>
-                                <input type="email" placeholder="eric@gmail.com" class=" focus:outline-none focus:border-gray-700 border-gray-300 border rounded-sm py-2 outline-none pl-2 pr-2" />
+                                <input v-model="email" type="text"  placeholder="eric@gmail.com" class=" focus:outline-none focus:border-gray-700 border-gray-300 border rounded-sm py-2 outline-none pl-2 pr-2" />
                             </div>
                             <button type="submit" class="focus:outline-none bg-indigo-700 hover:bg-indigo-600 text-white text-base w-full py-3 px-6 rounded">M'abonner</button>
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <div class="w-11/12 xl:w-5/12 mx-auto xl:mx-0 mt-8 xl:mt-0 flex justify-end md:w-5/12 bg-white  relative py-20">
@@ -126,10 +129,36 @@
 </template>
 
 <script>
+import _ENV from './../apiEnv.js';
 export default {
   name: 'AbonnerPage',
   layouts:'default',
-
+  data() {
+    return {
+        email:null,
+        response:null
+    }
+  },
+  computed:{
+    checkErr(){
+        return  this.response;
+    }
+  },
+  methods:{
+    submit(){
+        fetch(_ENV.endpoints.suscribe,{
+            method:'POST',
+            body:JSON.stringify({'email':this.email}),
+            headers: {
+               "Content-type": "application/json; charset=UTF-8"
+            }
+        }).then(res=>res.json())
+          .then((json)=>{
+              this.response=json;
+              console.log(json)
+          })
+    },
+  },
 }
 </script>
 

@@ -44,7 +44,6 @@
                                 <div class="font-bold text-3xl text-center pb-1">Amani Flavien</div>
                                 <p class="text-gray-800 text-sm text-center">Développeur back-end</p>
                                 <p class="text-center text-gray-600 text-base pt-3 font-normal">An avid open-source developer who loves to be creative and inventive. I have 20 years of experience in the field.</p>
-                         
                             </div>
                         </div>
                     </div>

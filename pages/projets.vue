@@ -24,14 +24,14 @@ export default {
      return {
           listProject:[
                  {
-                    namelogo:'logo.webp',
-                    title:'Bitomax',
+                    namelogo:'mediror.png',
+                    title:'Mediror',
                     online:true,
                     createdat:'Janvier 2022',
                     linksite:'https://google.com',
                     linkinstagram:'https://google.com',
                     linkfacebook:'https://google.com',
-                    description:'bitomax est une boutique en ligne beaucoup plus extravertie. Il met les magasins en contact avec leurs clients en utilisant beaucoup plus de simplicité .',
+                    description:'Mediror est une boutique en ligne beaucoup plus extravertie. Il met les magasins en contact avec leurs clients en utilisant beaucoup plus de simplicité .',
                  },
                  {
                     namelogo:'logoText.webp',
