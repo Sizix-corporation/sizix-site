@@ -23,7 +23,7 @@
                         <div class="h-300 rounded overflow-hidden shadow-md bg-white">
                             <div class="absolute -mt-20 w-full flex justify-center">
                                 <div class="h-32 w-32">
-                                    <img src="https://cdn.tuk.dev/assets/photo-1566753323558-f4e0952af115.jfif" alt="" class="rounded-full object-cover h-full w-full shadow-md" />
+                                    <img src="~/assets/Team/poupoinaka.png" alt="Poupoin aka le pilotant de ce projet et est un Développeur full-satck" class="rounded-full object-cover h-full w-full shadow-md" />
                                 </div>
                             </div>
                             <div class="px-6 mt-16">
@@ -37,7 +37,7 @@
                         <div class="rounded overflow-hidden shadow-md bg-white">
                             <div class="absolute -mt-20 w-full flex justify-center">
                                 <div class="h-32 w-32">
-                                    <img src="https://cdn.tuk.dev/assets/boy-smiling_23-2148155640.jpg" alt="" class="rounded-full object-cover h-full w-full shadow-md" />
+                                    <img src="~/assets/Team/poupoinaka.png" alt="Poupoin aka " class="rounded-full object-cover h-full w-full shadow-md" />
                                 </div>
                             </div>
                             <div class="px-6 mt-16">
